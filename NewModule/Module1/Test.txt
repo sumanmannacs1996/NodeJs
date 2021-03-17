@@ -1,0 +1,2 @@
+Writing in file using "writeFileSync" function.
+Append new text using "appendFileSync" function.
