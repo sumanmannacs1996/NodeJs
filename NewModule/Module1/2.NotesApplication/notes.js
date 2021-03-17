@@ -1,6 +1,11 @@
 const fs = require("fs");
 const chalk = require('chalk');
 
+const clearNotes =()=>{
+    fs.writeFileSync('notes.json','');
+    console.log(chalk.green.inverse("All Notes Clear Successfully!!"));
+}
+
 const readNote=(title)=>{
     const list = loadNotes();
     debugger
@@ -72,5 +77,6 @@ module.exports={
     addNotes:addNotes,
     removeNotes:removeNotes,
     showList:showList,
-    readNote:readNote
+    readNote:readNote,
+    clearNotes:clearNotes
 }

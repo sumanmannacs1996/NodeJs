@@ -38,4 +38,12 @@ yargs.command({
     }
 })
 
+yargs.command({
+    command: 'clear',
+    describe: 'clear all the note',
+    handler: ()=> {
+        notes.clearNotes();
+    }
+})
+
 yargs.parse();
